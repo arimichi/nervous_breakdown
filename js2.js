@@ -39,9 +39,10 @@ window.onload = function () {
 // シャッフル
 function shuffle(arrays) {
 	const array = arrays.slice()
+	let randomIndex = ""
 	for (let i = array.length - 1; i >= 0; i--) {
 		// 末尾に；をつけないと表示できない
-		const randomIndex = Math.floor(Math.random() * (i + 1));
+		randomIndex = Math.floor(Math.random() * (i + 1));
 		[array[i], array[randomIndex]] = [array[randomIndex], array[i]];
 	}
 	return array
