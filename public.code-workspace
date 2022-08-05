@@ -1,0 +1,49 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"javascript.format.insertSpaceAfterConstructor": true,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": false,
+		"files.eol": "\n",
+		"[html]": {
+			"editor.formatOnSave": true,
+		},
+		"[scss]": {
+			"editor.formatOnSave": false,
+			"editor.codeActionsOnSave": {
+					"source.fixAll.stylelint": true
+			},
+		},
+		"[javascript]": {
+			"editor.formatOnSave": true,
+		},
+		"[json]": {
+			"editor.formatOnSave": true,
+		},
+
+		"csscomb.formatOnSave": false,
+
+		"stylelint.validate": ["css", "scss"],
+
+		"liveSassCompile.settings.generateMap": false,
+		"liveSassCompile.settings.compileOnWatch": true,
+		"liveSassCompile.settings.formats": [
+				{
+						"format": "compressed",
+						"extensionName": ".css",
+						"savePathSegmentKeys": null,
+						"savePathReplaceSegmentsWith": null
+				}
+		],
+		"liveSassCompile.settings.autoprefix": [
+				"last 2 versions",
+				"Android >= 4",
+				"ios_saf >= 8"
+		],
+	},
+}
