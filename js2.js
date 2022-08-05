@@ -5,7 +5,7 @@ let startTime
 // 経過秒数用 タイマーID
 let timer
 // s : スペード, d : ダイヤ, h : ハート, c : クローバー
-const suits = ["s", "d", "h", "c"];
+const suits = ["s", "d", "h", "c"]
 
 // オブジェクトをつくる関数
 function cardFanc(suit, num) {
@@ -38,12 +38,12 @@ window.onload = function () {
 
 // シャッフル
 function shuffle(arrays) {
-	const array = arrays.slice();
+	const array = arrays.slice()
 	for (let i = array.length - 1; i >= 0; i--) {
 		const randomIndex = Math.floor(Math.random() * (i + 1));
 		[array[i], array[randomIndex]] = [array[randomIndex], array[i]];
 	}
-	return array;
+	return array
 }
 
 // シャッフルし、HTML生成
@@ -67,19 +67,19 @@ function shuffleCard() {
 
 // タイマー開始
 function startTimer() {
-	timer = setInterval(showSecond, 1000);
+	timer = setInterval(showSecond, 1000)
 }
 // 秒数表示
 function showSecond() {
-	const nowTime = new Date();
-	let elapsedTime = Math.floor((nowTime - startTime) / 1000);
-	let str = '経過秒数: ' + elapsedTime + '秒';
-	let re = document.getElementById('result');
-	re.innerHTML = str;
+	const nowTime = new Date()
+	let elapsedTime = Math.floor((nowTime - startTime) / 1000)
+	let str = '経過秒数: ' + elapsedTime + '秒'
+	let re = document.getElementById('result')
+	re.innerHTML = str
 }
 
 // 1枚目のカードの変数を宣言 最初はnull
-let firstCard = null;
+let firstCard = null
 // カードめくり用 タイマーID
 let backTimer
 // そろえた枚数
@@ -97,7 +97,7 @@ function flip(e) {
 	// 1枚目の処理
 	if (firstCard === null) {
 		// めくったカードをfirstCardに設定
-		firstCard = filipedCard;
+		firstCard = filipedCard
 		// 2枚目の処理
 	} else {
 		// 数字が1枚目と一致する場合
@@ -110,7 +110,7 @@ function flip(e) {
 				filipedCard.classList.add("finish")
 				backTimer = NaN
 				// firstCardを初期値に戻す
-				firstCard = null;
+				firstCard = null
 				if (countUnit === 26) {
 					clearInterval(timer) // timer終了
 				}
