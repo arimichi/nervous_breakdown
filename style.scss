@@ -21,25 +21,34 @@ h1 {
   margin: 0 20px;
 }
 
-.card {
+@mixin card {
   // 縦横比2:3
   width: 50px;
   height: 75px;
-  font-size: 30px;
   background-repeat: no-repeat;
   margin: 5px;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  border: 1px solid #000;
-  border-radius: 3px;
 
   &.back {
     border: none;
     cursor: pointer;
     background-image: url("./img/b01.svg") !important;
   }
+}
+
+.card {
+  @include card;
+
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.card2 {
+  @include card;
 }
 
 a {

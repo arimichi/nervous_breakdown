@@ -57,7 +57,7 @@ function shuffleCard() {
 		for (let j = 0; j < 13; j++) {
 			shaffleN = shuffled[i * 13 + j]
 			div = document.createElement("div")
-			div.className = 'card back'
+			div.className = 'card2 back'
 			div.number = shaffleN.num
 			div.onclick = flip // カードをクリックしたときの関数
 			div.style.backgroundImage = `url(img/${shaffleN.front})`
